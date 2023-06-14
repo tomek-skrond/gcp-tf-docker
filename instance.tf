@@ -53,6 +53,6 @@ resource "google_compute_instance" "default" {
     }
   }
   provisioner "local-exec" {
-    command = "ansible-playbook -i ${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}, --private-key ${local.privkey_ansible} ${local.playbook}"
+    command = "ansible-playbook -i ${google_compute_instance.default.network_interface.0.access_config.0.nat_ip}, --private-key ${local.privkey_ansible} ansible/${local.playbook}"
   }
 }
