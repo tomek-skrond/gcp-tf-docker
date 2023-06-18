@@ -1,0 +1,3 @@
+---
+- name: Deploy docker container nginx
+  ansible.builtin.command: docker run -dp 80:80 nginx
